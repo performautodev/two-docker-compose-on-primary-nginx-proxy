@@ -6,9 +6,17 @@ I run this command to set **nginx-proxy** as primary proxy on my real VPS centos
 docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro nginxproxy/nginx-proxy
 ```
 
+
+
+
+
 I want when visit normal real URl : 
+
 www.real-domain-1.com point to docker container ID xxxxxxx1
+
 www.real-domain-2.com point to docker container ID xxxxxxx2
+\
+
 
 I run this command for each directory: (/var/www/html/www.real-domain-1.com/) and (/var/www/html/www.real-domain-2.com/)
 
