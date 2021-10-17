@@ -4,7 +4,7 @@ I run this command to set **nginx-proxy** as primary proxy on my real VPS centos
 
 
 
-```console
+```bash
 docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro nginxproxy/nginx-proxy
 ```
 
@@ -25,7 +25,7 @@ I run this command for each directory:
 
 (/var/www/html/www.real-domain-1.com/) and (/var/www/html/www.real-domain-2.com/)
 
-```console
+```bash
 docker-compose up -d --build
 ```
 
@@ -41,7 +41,7 @@ Successfully built 8a3eac9ed4e5
 But if I run eatch container speatrely works :
 
 
-```console
+```bash
 docker images
 ```
 
@@ -52,12 +52,12 @@ wwwXXX2_react-web-app   latest    8a3eac9ed4e5   2 hours ago      134MB
 ```
 
 
-```console
+```bash
 docker run -d -e VIRTUAL_HOST=www.real-domain-1.com wwwXXX1_react-web-app
 ```
 
 
-```console
+```bash
 docker run -d -e VIRTUAL_HOST=www.real-domain-2.com wwwXXX2_react-web-app
 ```
 
